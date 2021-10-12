@@ -15,7 +15,7 @@ def rectangle(x: int, y: int, w: int, h: int):
     turtle.setpos(x, y)
     turtle.pendown()
     turtle.goto(x + w, y)
-    turtle.goto(x, y - h)
+    turtle.goto(x + w, y - h)
     turtle.goto(x, y - h)
     turtle.goto(x, y)
     turtle.penup()
