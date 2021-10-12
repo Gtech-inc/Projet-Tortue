@@ -4,6 +4,7 @@ from porte import porte
 from fenetre import fenetre
 import turtle
 
+
 def rdc(x, y_sol, c_facade, c_porte):
     '''
     Paramètres
@@ -19,11 +20,12 @@ def rdc(x, y_sol, c_facade, c_porte):
     # Dessine la facade
     pass
 
-    # Construit les 3 éléments (1 porte et 2 fenetres)
+    # Construit les 3 éléments (1 porte et 2 fenêtres)
 
     pass
 
+
 if __name__ == '__main__':
-    rdc(0,0,"red","green")
-    # On ferme la fenêtre s'il y a un clique gauche
+    rdc(0, 0, "red", "green")
+    # On ferme la fenêtre si il y a un clique gauche
     turtle.exitonclick()

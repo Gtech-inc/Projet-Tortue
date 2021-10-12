@@ -1,7 +1,6 @@
 import turtle
-from random import randint, shuffle
-from sol import sol
-from immeuble import immeuble
+
+
 # ------------------------------
 # ------------------------------
 # ------------------------------
@@ -15,12 +14,9 @@ def main():
 
     # Dessin des 4 immeubles
 
-
-    # On ferme la fenêtre s'il y a un clique gauche
+    # On ferme la fenêtre si il y a un clique gauche
     turtle.exitonclick()
+
 
 if __name__ == '__main__':
     main()
-
-
-
