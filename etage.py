@@ -15,7 +15,7 @@ def etage(x, y_sol, couleur, niveau):
        Cette fonction dessine un étage d'un immeuble
     '''
     # dessin des murs
-
+    
     # dessin des 3 Eléments
     pass
 
