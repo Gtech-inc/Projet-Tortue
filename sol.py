@@ -14,11 +14,7 @@ def sol(y_sol):
     if not turtle.isdown():
         turtle.pendown()
     turtle.pensize(3)
-    turtle.penup()
-    turtle.goto(-380, y_sol-300)
-    turtle.pendown()
-    turtle.goto(380, y_sol-300)
-
+    trait(-380, y_sol, 380, y_sol)
 
 if __name__ == '__main__':
     sol(0)
