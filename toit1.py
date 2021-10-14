@@ -33,7 +33,6 @@ def toit1(x, y_sol, niveau):
     turtle.end_fill()
     turtle.penup()
 
-    pass
 
 
 if __name__ == '__main__':
