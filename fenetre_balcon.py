@@ -13,11 +13,49 @@ def fenetre_balcon(x,y):
     '''
     # porte-fenetre
 
+    turtle.setposition(x, y)
+    turtle.pendown()
+    absi = x
+    ordo = y
+    #----Sans boucle----
+    turtle.begin_fill()
+    turtle.fillcolor("grey")
+    absi += 15
+    turtle.setx(absi)
+    ordo += 50
+    turtle.sety(ordo)
+    absi -= 30
+    turtle.setx(absi)
+    ordo -= 50
+    turtle.sety(ordo)
+    absi += 15
+    turtle.setx(absi)
+    absi -= 15
+    turtle.setposition(absi, ordo)
+    turtle.end_fill()
+    turtle.penup()
     pass
 
 
     # balcon
 
+    absi -= 5 #se décale pour faire le balcon
+    setwidth = 2 #Set la largeur du trait
+    turtle.setpos(absi, ordo)
+    turtle.pensize(setwidth)
+    for i in range(8):
+        turtle.pendown()
+        if turtle.isdown:
+            ordo += 25
+            turtle.sety(ordo)
+            absi += 5
+            turtle.setx(absi)
+            ordo -= 25
+            turtle.sety(ordo)
+            absi -= 5
+            turtle.setx(absi)
+        absi += 5
+        turtle.setx(absi)
 
     pass
 
