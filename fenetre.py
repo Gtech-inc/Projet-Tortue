@@ -17,7 +17,7 @@ def fenetre(x,y):
     #----Sans boucle----
     turtle.begin_fill()
     turtle.fillcolor("grey")
-    absi += 30
+    absi += 15
     turtle.setx(absi)
     ordo += 30
     turtle.sety(ordo)
@@ -25,6 +25,10 @@ def fenetre(x,y):
     turtle.setx(absi)
     ordo -= 30
     turtle.sety(ordo)
+    absi += 15
+    turtle.setx(absi)
+    absi -= 15
+    turtle.setposition(absi, ordo)
     turtle.end_fill()
     turtle.penup()
     pass

@@ -9,6 +9,8 @@ def toit2(x, y_sol, niveau):
         niveau : num du niveau (0 pour les rdc, ...)
     Cette fonction dessine un toit plat d'épaisseur 10 pixels et mesurant 140 pixels de large
     '''
+    
+
     pass
 
 if __name__ == '__main__':
