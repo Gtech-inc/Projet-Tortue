@@ -17,18 +17,16 @@ def etage(x, y_sol, couleur, niveau):
     # dessin des murs
     facade(x, y_sol, couleur, niveau)
 
-    y_sol += 50
+    y_sol += 10
     x += 25
     turtle.penup()
     turtle.setx(x)
     turtle.sety(y_sol)
 
-    fenetre(x, y_sol)
-    x += 75
-    fenetre(x, y_sol)
-    x += 75
-    fenetre(x, y_sol)
-    x += 75
+    fenetre(x, y_sol + 20)
+    x += 50
+    fenetre(x, y_sol + 20)
+    x += 50
     fenetre_balcon(x, y_sol)
 
     print("x = " + str(x))
