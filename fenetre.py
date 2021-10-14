@@ -17,13 +17,13 @@ def fenetre(x,y):
     #----Sans boucle----
     turtle.begin_fill()
     turtle.fillcolor("grey")
-    absi += 50
+    absi += 30
     turtle.setx(absi)
-    ordo += 50
+    ordo += 30
     turtle.sety(ordo)
-    absi -= 50
+    absi -= 30
     turtle.setx(absi)
-    ordo -= 50
+    ordo -= 30
     turtle.sety(ordo)
     turtle.end_fill()
     turtle.penup()
