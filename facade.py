@@ -14,9 +14,9 @@ def facade(x, y_sol, couleur, niveau):
     turtle.begin_fill()
     turtle.fillcolor(couleur)
     for i in range(2):
-        turtle.forward(150)
+        turtle.forward(250)
         turtle.left(90)
-        turtle.forward(75)
+        turtle.forward(125)
         turtle.left(90)
         
     turtle.end_fill()

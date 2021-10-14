@@ -15,6 +15,24 @@ def etage(x, y_sol, couleur, niveau):
        Cette fonction dessine un étage d'un immeuble
     '''
     # dessin des murs
+    facade(x, y_sol, couleur, niveau)
+
+    y_sol += 50
+    x += 25
+    turtle.penup()
+    turtle.setx(x)
+    turtle.sety(y_sol)
+
+    fenetre(x, y_sol)
+    x += 75
+    fenetre(x, y_sol)
+    x += 75
+    fenetre(x, y_sol)
+    x += 75
+    fenetre_balcon(x, y_sol)
+
+    print("x = " + str(x))
+    print("y = " + str(y_sol))
     
     # dessin des 3 Eléments
     pass
