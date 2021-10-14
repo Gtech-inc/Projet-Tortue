@@ -19,17 +19,18 @@ def porte2(x,y,couleur):
     y += 50
     turtle.sety(y)
 
-    for i in range(0):
+    for i in range(30):
+        coef = 0.88 *i
         x -= 1
-        y += 1
+        y += 1 - coef *0.08
         turtle.setx(x)
         turtle.sety(y)
 
-    for i in range(15):
-        x -= 1
-        y -= 1
-        turtle.setx(x)
-        turtle.sety(y)
+    # for i in range(15):
+    #     x -= 1
+    #     y -= 1 + i * 0.1
+    #     turtle.setx(x)
+    #     turtle.sety(y)
 
     y -= 50
     turtle.sety(y)
