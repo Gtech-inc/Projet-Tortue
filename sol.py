@@ -1,4 +1,4 @@
-# Module par sebastien Chanthery
+# Module par sebastien
 
 import turtle
 from trait import trait
@@ -13,6 +13,11 @@ def sol(y_sol):
     """
     if not turtle.isdown():
         turtle.pendown()
+    turtle.pensize(3)
+    turtle.penup()
+    turtle.goto(-380, y_sol-300)
+    turtle.pendown()
+    turtle.goto(380, y_sol-300)
 
 
 if __name__ == '__main__':
