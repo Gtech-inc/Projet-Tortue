@@ -1,4 +1,6 @@
 import random
+
+import porte2
 from facade import facade
 from porte import porte
 from fenetre import fenetre
@@ -31,15 +33,19 @@ def rdc(x, y_sol, c_facade, c_porte):
     # Construit les 3 éléments (1 porte et 2 fenêtres)
     length = 140/4
     is_door = False
-    for i in range(1,4):
+    for i in range(1, 4):
         choice = random.choice(['Door', 'Window'])
         if choice == 'Door':
             if not is_door:
-                porte(length*i, y, c_porte)
+                style = random.choice(['porte', 'porte2'])
+                if style == 'porte':
+                    porte(length*i, y_sol+(50/2), c_porte)
+                else:
+                    porte2.porte2(length*i, y_sol+(50/2), c_porte)
             else:
-                fenetre(length*i, y)
+                fenetre(length*i, y_sol+())
         else:
-            fenetre(length*i, y)
+            fenetre(length*i, y_sol+())
 
 
 if __name__ == '__main__':
