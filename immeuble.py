@@ -16,24 +16,26 @@ def immeuble(x, y_sol):
     La couleur de la façade et la couleur de la porte sont tirées au hasard
     '''
     # Nombre d'étage (aléatoire)
-
-    pass
+    nbStage = randint(0, 7)
 
     #Couleurs des éléments (aléatoire)
+    turtle.colormode(255)
+    color1 = 244
 
-    pass
+    couleur = turtle.color(color1)
 
     # Dessin du RDC
-
-    pass
+    
 
     # Dessin des étages
-
-    pass
+    y= -200
+    x = -300
+    for niveau in range(nbStage):
+        etage(x, y_sol, couleur, niveau)
+        y+= 75
 
     # Dessin du toit
 
-    pass
 
 if __name__ == '__main__':
     immeuble(0,0)
