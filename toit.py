@@ -12,6 +12,8 @@ def toit(x, y_sol, niveau):
     Cette fonction dessine au hasard un des 2 types de toit
 
     '''
+    
+
     pass
 
 if __name__ == '__main__':

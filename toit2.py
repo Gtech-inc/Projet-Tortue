@@ -9,10 +9,12 @@ def toit2(x, y_sol, niveau):
         niveau : num du niveau (0 pour les rdc, ...)
     Cette fonction dessine un toit plat d'épaisseur 10 pixels et mesurant 140 pixels de large
     '''
-    turtle.setposition(x, y_sol)
+    turtle.penup()
+    niv = niveau * 75
+    ordo = niv
+    turtle.setposition(x, ordo)
     turtle.pendown()
     absi = x
-    ordo = y_sol
     #----Sans boucle----
     turtle.begin_fill()
     turtle.fillcolor("black")
@@ -52,6 +54,6 @@ def toit2(x, y_sol, niveau):
 
 
 if __name__ == '__main__':
-    toit2(0,0,0)
+    toit2(0,0,2)
     # On ferme la fenêtre s'il y a un clique gauche
     turtle.exitonclick()
