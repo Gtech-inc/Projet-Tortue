@@ -1,5 +1,6 @@
 import turtle
 
+
 def toit1(x, y_sol, niveau):
     '''
     Paramètres :
@@ -17,7 +18,7 @@ def toit1(x, y_sol, niveau):
     turtle.pendown()
     absi = x
     ordo = niv
-    #----Sans boucle----
+    # ----Sans boucle----
     turtle.begin_fill()
     turtle.fillcolor("black")
     absi += 80
@@ -37,8 +38,7 @@ def toit1(x, y_sol, niveau):
     turtle.penup()
 
 
-
 if __name__ == '__main__':
-    toit1(0,0,0)
+    toit1(0, 0, 0)
     # On ferme la fenêtre s'il y a un clique gauche
     turtle.exitonclick()

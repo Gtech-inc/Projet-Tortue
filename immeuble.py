@@ -1,11 +1,8 @@
 # module immeuble
 
-from couleur_aleatoire import couleur_aleatoire
-from random import randint
-from rdc import rdc
-from etage import etage
-from toit import toit
 import turtle
+from random import randint
+from etage import etage
 
 
 def immeuble(x, y_sol):
