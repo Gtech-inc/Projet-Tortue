@@ -34,7 +34,7 @@ def fenetre_balcon(x,y):
     turtle.setposition(absi, ordo)
     turtle.end_fill()
     turtle.penup()
-    pass
+
 
 
     # balcon
@@ -59,8 +59,6 @@ def fenetre_balcon(x,y):
     
     #reinitialisation de la taille du crayon
     turtle.pensize(0)
-
-    pass
 
 
 
