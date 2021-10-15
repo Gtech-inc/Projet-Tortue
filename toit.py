@@ -5,14 +5,14 @@ import turtle
 
 
 def toit(x, y_sol, niveau):
-    '''
+    """
     Paramètres
         x : abscisse du centre de l'étage
         y_sol: ordonnée du sol
         niveau : numéro de l'étage en partant de 0 pour le rdc
     Cette fonction dessine au hasard un des 2 types de toit
 
-    '''
+    """
     choice = randint(1, 2)
     if choice == 1:
         toit1(x, y_sol, niveau)

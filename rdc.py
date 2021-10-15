@@ -33,20 +33,34 @@ def rdc(x, y_sol, c_facade, c_porte):
     # Construit les 3 éléments (1 porte et 2 fenêtres)
     length = 140/4
     is_door = False
-    for i in range(1, 4):
-        choice = random.choice(['Door', 'Window'])
-        if choice == 'Door':
-            if not is_door:
-                is_door = True
-                style = random.choice(['porte', 'porte2'])
-                if style == 'porte':
-                    porte(length*i, y_sol+(50/2), c_porte)
-                else:
-                    porte2.porte2(length*i, y_sol+(50/2), c_porte)
-            else:
-                fenetre(length*i, y_sol+35)
+    """
+    Paramètres
+        x : abscisse du centre de l' étage
+        y_sol : ordonnée du sol du la rue
+        couleur : couleur de la façade de l' étage
+        niveau : numéro de l' étage en partant de 0 pour le rdc
+    Remarque
+       Cette fonction dessine un étage d' un immeuble
+    """
+    y_sol += 10
+    x += 25
+    turtle.penup()
+    turtle.setx(x)
+    turtle.sety(y_sol)
+
+    if randint(0, 1) == 0:
+        fenetre(x, y_sol + 20)
+    else:
+        fenetre_balcon(x, y_sol)
+
+    turtle.penup()
+    for i in range(2):
+        x += 50
+        if randint(0, 1) == 0:
+            fenetre(x, y_sol + 20)
         else:
-            fenetre(length*i, y_sol+35)
+            fenetre_balcon(x, y_sol)
+        turtle.penup()
 
 
 if __name__ == '__main__':

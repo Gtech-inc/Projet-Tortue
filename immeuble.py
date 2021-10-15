@@ -6,13 +6,13 @@ from etage import etage
 
 
 def immeuble(x, y_sol):
-    '''
+    """
     Paramètres
         x : abscisse du centre de l'étage
         y_sol : ordonnée du sol du la rue
     Cette fonction dessine un immeuble Le nombre d'étage est compris aléatoirement entre 0 et 4
     La couleur de la façade et la couleur de la porte sont tirées au hasard
-    '''
+    """
     # Nombre d'étage (aléatoire)
     nbStage = randint(0, 7)
 

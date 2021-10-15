@@ -3,13 +3,13 @@ from trait import trait
 
 
 def toit2(x, y_sol, niveau):
-    '''
+    """
     Paramètres :
         x : abcisse du centre du toit
         y_sol : ordonnée du sol du la rue
         niveau : num du niveau (0 pour les rdc, ...)
     Cette fonction dessine un toit plat d'épaisseur 10 pixels et mesurant 140 pixels de large
-    '''
+    """
     turtle.penup()
     niv = niveau * 75
     ordo = niv

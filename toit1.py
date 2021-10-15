@@ -2,7 +2,7 @@ import turtle
 
 
 def toit1(x, y_sol, niveau):
-    '''
+    """
     Paramètres :
         x : abcisse du centre du toit
         y_sol : ordonnée du sol du la rue
@@ -10,7 +10,7 @@ def toit1(x, y_sol, niveau):
     Cette fonction dessine un toit triangulaire noir de base 160 pixels
     et de hauteur centrale 40 pixels
     etage : 75 de hauteur
-    '''
+    """
     turtle.penup()
     niv = niveau * 75
     ordo = niv

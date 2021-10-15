@@ -3,7 +3,7 @@ from rectangle import rectangle
 
 
 def facade(x, y_sol, couleur, niveau):
-    '''
+    """
     Paramètres :
         x : abscisse du centre de la façade
         y_sol : ordonnée du sol du la rue
@@ -11,7 +11,7 @@ def facade(x, y_sol, couleur, niveau):
         niveau : num du niveau (0 pour les rdc, ...)
     remarque :
         Facade dessine une facade sans les éléments intérieurs
-    '''
+    """
     turtle.begin_fill()
     turtle.fillcolor(couleur)
     for i in range(2):
