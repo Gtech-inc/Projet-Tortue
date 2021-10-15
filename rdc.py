@@ -37,15 +37,16 @@ def rdc(x, y_sol, c_facade, c_porte):
         choice = random.choice(['Door', 'Window'])
         if choice == 'Door':
             if not is_door:
+                is_door = True
                 style = random.choice(['porte', 'porte2'])
                 if style == 'porte':
                     porte(length*i, y_sol+(50/2), c_porte)
                 else:
                     porte2.porte2(length*i, y_sol+(50/2), c_porte)
             else:
-                fenetre(length*i, y_sol+())
+                fenetre(length*i, y_sol+35)
         else:
-            fenetre(length*i, y_sol+())
+            fenetre(length*i, y_sol+35)
 
 
 if __name__ == '__main__':

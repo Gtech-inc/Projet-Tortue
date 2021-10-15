@@ -37,9 +37,7 @@ def etage(x, y_sol, couleur, niveau):
         else:
             fenetre_balcon(x, y_sol)
         turtle.penup()
-    
     # dessin des 3 Elements
-    pass
 
 
 if __name__ == '__main__':
