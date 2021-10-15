@@ -58,7 +58,7 @@ def fenetre_balcon(x,y):
         turtle.setx(absi)
     
     #reinitialisation de la taille du crayon
-    turtle.pensize(1)
+    turtle.pensize(0)
 
     pass
 
