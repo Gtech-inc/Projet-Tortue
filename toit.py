@@ -12,9 +12,12 @@ def toit(x, y_sol, niveau):
     Cette fonction dessine au hasard un des 2 types de toit
 
     '''
-    
+    choice = randint(1,2)
+    if choice == 1:
+        toit1(x, y_sol, niveau)
+    else:
+        toit2(x, y_sol, niveau)
 
-    pass
 
 if __name__ == '__main__':
     toit(0,0,0)
