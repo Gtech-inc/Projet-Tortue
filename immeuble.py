@@ -25,14 +25,15 @@ def immeuble(x, y_sol):
     # Dessin du RDC
 
     # Dessin des étages
-    y = -200
+    y_sol= -200
     x = -300
     for niveau in range(nbStage):
         etage(x, y_sol, couleur, niveau)
-        y += 75
+        y_sol += 75
 
     # Dessin du toit
-
+    
+    toit(x+75, 0, nbStage)
 
 if __name__ == '__main__':
     immeuble(0, 0)

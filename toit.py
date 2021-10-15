@@ -17,7 +17,7 @@ def toit(x, y_sol, niveau):
     if choice == 1:
         toit1(x, y_sol, niveau)
     else:
-        toit2(x, y_sol, niveau)
+        toit1(x, y_sol, niveau)
 
 
 if __name__ == '__main__':

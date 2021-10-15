@@ -12,27 +12,30 @@ def toit1(x, y_sol, niveau):
     etage : 75 de hauteur
     """
     turtle.penup()
-    niv = niveau * 75
-    ordo = niv
-    turtle.setposition(x, ordo)
+    y_sol = -200 + niveau * 75 + y_sol
+    turtle.setposition(x, y_sol)
     turtle.pendown()
     absi = x
+<<<<<<< HEAD
+    #----Sans boucle----
+=======
     ordo = niv
     # ----Sans boucle----
+>>>>>>> 6856f838d3dd33cea2eece4e993b52006c651a19
     turtle.begin_fill()
     turtle.fillcolor("black")
     absi += 80
     turtle.setx(absi)
     absi -= 80
-    ordo += 40
-    turtle.setposition(absi, ordo)
+    y_sol += 40
+    turtle.setposition(absi, y_sol)
     absi -= 80
-    ordo -= 40
-    turtle.setposition(absi, ordo)
+    y_sol -= 40
+    turtle.setposition(absi, y_sol)
     absi += 80
     turtle.setx(absi)
     absi -= 80
-    turtle.setposition(absi, ordo)
+    turtle.setposition(absi, y_sol)
 
     turtle.end_fill()
     turtle.penup()
