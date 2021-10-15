@@ -1,6 +1,7 @@
 import turtle
 from rectangle import rectangle
 
+
 def facade(x, y_sol, couleur, niveau):
     '''
     Paramètres :
@@ -18,7 +19,7 @@ def facade(x, y_sol, couleur, niveau):
         turtle.left(90)
         turtle.forward(75)
         turtle.left(90)
-        
+
     turtle.end_fill()
 
 

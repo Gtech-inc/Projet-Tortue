@@ -1,7 +1,8 @@
 import turtle
 from rectangle import rectangle
 
-def porte(x,y,couleur):
+
+def porte(x, y, couleur):
     '''
     Paramètres :
         x est l'abcisse du centre de la porte
@@ -30,6 +31,6 @@ def porte(x,y,couleur):
 
 
 if __name__ == '__main__':
-    porte(0,0,"red")
+    porte(0, 0, "red")
     # On ferme la fenêtre s'il y a un clique gauche
     turtle.exitonclick()

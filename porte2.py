@@ -1,6 +1,7 @@
-import  turtle
+import turtle
 
-def porte2(x,y,couleur):
+
+def porte2(x, y, couleur):
     '''
     Paramètres :
         x est l'abcisse du centre de la porte
@@ -20,9 +21,9 @@ def porte2(x,y,couleur):
     turtle.sety(y)
 
     for i in range(30):
-        coef = 0.88 *i
+        coef = 0.88 * i
         x -= 1
-        y += 1 - coef *0.08
+        y += 1 - coef * 0.08
         turtle.setx(x)
         turtle.sety(y)
 
@@ -40,8 +41,7 @@ def porte2(x,y,couleur):
     pass
 
 
-
 if __name__ == '__main__':
-    porte2(0,0,"red")
+    porte2(0, 0, "red")
     # On ferme la fenêtre s'il y a un clique gauche
     turtle.exitonclick()
