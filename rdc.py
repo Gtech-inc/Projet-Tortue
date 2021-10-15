@@ -1,6 +1,5 @@
-import random
-
-import porte2
+from random import randint
+from porte2 import porte2
 from facade import facade
 from porte import porte
 from fenetre import fenetre
@@ -31,7 +30,6 @@ def rdc(x, y_sol, c_facade, c_porte):
     trait(x-(140/2), y_sol+60, x-(140/2), y_sol)
     turtle.end_fill()
     # Construit les 3 éléments (1 porte et 2 fenêtres)
-    length = 140/4
     is_door = False
     """
     Paramètres
@@ -51,7 +49,11 @@ def rdc(x, y_sol, c_facade, c_porte):
     if randint(0, 1) == 0:
         fenetre(x, y_sol + 20)
     else:
-        fenetre_balcon(x, y_sol)
+        is_door = True
+        if randint(0, 1):
+            porte(x, y_sol, c_porte)
+        else:
+            porte2(x, y_sol, c_porte)
 
     turtle.penup()
     for i in range(2):
@@ -59,7 +61,12 @@ def rdc(x, y_sol, c_facade, c_porte):
         if randint(0, 1) == 0:
             fenetre(x, y_sol + 20)
         else:
-            fenetre_balcon(x, y_sol)
+            if not is_door:
+                is_door = True
+                if randint(0, 1) == 0:
+                    porte(x, y_sol, c_porte)
+                else:
+                    porte2(x, y_sol, c_porte)
         turtle.penup()
 
 
