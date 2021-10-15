@@ -1,19 +1,20 @@
 from facade import facade
-from random import shuffle,randint
+from random import randint
 from fenetre import fenetre
 from fenetre_balcon import fenetre_balcon
 import turtle
 
+
 def etage(x, y_sol, couleur, niveau):
-    '''
+    """
     Paramètres
-        x : abscisse du centre de l'étage
+        x : abscisse du centre de l' étage
         y_sol : ordonnée du sol du la rue
-        couleur : couleur de la façade de l'étage
-        niveau : numéro de l'étage en partant de 0 pour le rdc
+        couleur : couleur de la façade de l' étage
+        niveau : numéro de l' étage en partant de 0 pour le rdc
     Remarque
-       Cette fonction dessine un étage d'un immeuble
-    '''
+       Cette fonction dessine un étage d' un immeuble
+    """
     # dessin des murs
     facade(x, y_sol, couleur, niveau)
 
@@ -36,11 +37,10 @@ def etage(x, y_sol, couleur, niveau):
         else:
             fenetre_balcon(x, y_sol)
         turtle.penup()
-    
-    # dessin des 3 Eléments
-    pass
+    # dessin des 3 Elements
+
 
 if __name__ == '__main__':
-    etage(0,0,"red",0)
-    # On ferme la fenêtre s'il y a un clique gauche
+    etage(0, 0, "red", 0)
+    # On ferme la fenêtre si il y a un clique gauche
     turtle.exitonclick()
