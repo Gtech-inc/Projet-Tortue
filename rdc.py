@@ -1,14 +1,13 @@
-import random
-
-import porte2
+from random import randint
 from facade import facade
 from porte import porte
+from porte2 import porte2
 from fenetre import fenetre
 from trait import trait
 import turtle
 
 
-def rdc(x, y_sol, c_facade, c_porte):
+def rdc(x, y_sol, c_porte, c_facade):
     """
     Paramètres
         x : (int) abscisse du centre
@@ -21,49 +20,61 @@ def rdc(x, y_sol, c_facade, c_porte):
         Puis les 3 éléments : 1 porte et 2 fenêtres disposées au hasard
     """
     # Dessine la facade
-    if not turtle.isdown():
-        turtle.pendown()
-    turtle.fillcolor(c_facade)
-    turtle.begin_fill()
-    trait(x-(140/2), y_sol, x+(140/2), y_sol)
-    trait(x+(140/2), y_sol, x+(140/2), y_sol+60)
-    trait(x+(140/2), y_sol+60, x-(140/2), y_sol+60)
-    trait(x-(140/2), y_sol+60, x-(140/2), y_sol)
-    turtle.end_fill()
-    # Construit les 3 éléments (1 porte et 2 fenêtres)
-    length = 140/4
-    is_door = False
-    """
-    Paramètres
-        x : abscisse du centre de l' étage
-        y_sol : ordonnée du sol du la rue
-        couleur : couleur de la façade de l' étage
-        niveau : numéro de l' étage en partant de 0 pour le rdc
-    Remarque
-       Cette fonction dessine un étage d' un immeuble
-    """
-    y_sol += 10
+    facade(x, y_sol, c_facade)
+
     x += 25
+    doorDrown = False
+    windowdrown = False
+    turtle.penup()
+    turtle.setx(x)
+    turtle.sety(y_sol)
+    randomNumber = randint(0, 2)
+
+    if randomNumber == 0 and windowdrown == False:
+        fenetre(x, y_sol + 20)
+        windowdrown = True
+    elif randomNumber == 1 and doorDrown == False:
+        porte(x, y_sol, c_porte)
+        doorDrown = True
+    else:
+        porte2(x, y_sol, c_porte)
+        doorDrown = True
+
     turtle.penup()
     turtle.setx(x)
     turtle.sety(y_sol)
 
-    if randint(0, 1) == 0:
-        fenetre(x, y_sol + 20)
-    else:
-        fenetre_balcon(x, y_sol)
-
-    turtle.penup()
     for i in range(2):
+        turtle.end_fill()
+        randomNumber = randint(0, 2)
         x += 50
-        if randint(0, 1) == 0:
+        turtle.penup()
+        turtle.setx(x)
+        turtle.sety(y_sol)
+        turtle.begin_fill()
+        if randomNumber == 0:
             fenetre(x, y_sol + 20)
-        else:
-            fenetre_balcon(x, y_sol)
+            windowdrown = True
+        if randomNumber == 1 and doorDrown == False:
+            porte(x, y_sol, c_porte)
+            doorDrown = True
+        elif randomNumber == 2 and doorDrown == False:
+            porte2(x, y_sol, c_porte)
+            doorDrown = True
+        elif i == 1 and doorDrown == False:
+            if randomNumber == 1 and doorDrown == False:
+                porte(x, y_sol, c_porte)
+                doorDrown = True
+            elif randomNumber == 2 and doorDrown == False:
+                porte2(x, y_sol, c_porte)
+                doorDrown = True
+        elif randomNumber == 1 and doorDrown == True:
+            fenetre(x, y_sol + 20)
+         
         turtle.penup()
 
 
 if __name__ == '__main__':
-    rdc(0, 0, "red", "green")
+    rdc(0, 0, "grey", "red")
     # On ferme la fenêtre si il y a un clique gauche
     turtle.exitonclick()

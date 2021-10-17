@@ -16,12 +16,7 @@ def toit1(x, y_sol, niveau):
     turtle.setposition(x, y_sol)
     turtle.pendown()
     absi = x
-<<<<<<< HEAD
-    #----Sans boucle----
-=======
-    ordo = niv
     # ----Sans boucle----
->>>>>>> 6856f838d3dd33cea2eece4e993b52006c651a19
     turtle.begin_fill()
     turtle.fillcolor("black")
     absi += 80
