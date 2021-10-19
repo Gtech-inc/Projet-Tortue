@@ -11,13 +11,14 @@ def fenetre(x, y):
         dessine une fenêtre de 30 pixels sur 30 pixels
 
     """
-    turtle.setposition(x, y)
-    turtle.pendown()
+    turtle.setx(x)
+    turtle.sety(y)
     absi = x
     ordo = y
-    # ----Sans boucle----
     turtle.begin_fill()
     turtle.fillcolor("grey")
+    turtle.pendown()
+    # ----Sans boucle----
     absi += 15
     turtle.setx(absi)
     ordo += 30
@@ -28,8 +29,6 @@ def fenetre(x, y):
     turtle.sety(ordo)
     absi += 15
     turtle.setx(absi)
-    absi -= 15
-    turtle.setposition(absi, ordo)
     turtle.end_fill()
     turtle.penup()
 

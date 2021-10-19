@@ -11,23 +11,25 @@ def porte(x, y, couleur):
     remarque:
         Cette fonction dessine une porte de 30 pixels de large pour 50 pixels de hauteur
     """
-    turtle.begin_fill()
-    turtle.pendown()
-    turtle.fillcolor(couleur)
+    turtle.end_fill()
+    turtle.penup()
+    turtle.setposition(x, y)
     x += 15
-    turtle.setx(x)
     y += 50
+    turtle.setx(x)
+    turtle.pendown()
+    turtle.begin_fill()
+    turtle.fillcolor(couleur)
     turtle.sety(y)
     x -= 30
     turtle.setx(x)
     y -= 50
     turtle.sety(y)
-    x += 15
+    x += 30
     turtle.setx(x)
-    x -= 15
-    turtle.setposition(x, y)
     turtle.end_fill()
     turtle.penup()
+    turtle.setposition(x, y)
 
 
 if __name__ == '__main__':

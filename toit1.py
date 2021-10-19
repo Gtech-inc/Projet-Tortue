@@ -12,7 +12,7 @@ def toit1(x, y_sol, niveau):
     etage : 75 de hauteur
     """
     turtle.penup()
-    y_sol = -200 + niveau * 75 + y_sol
+    y_sol = -198 + niveau * 75 + y_sol
     turtle.setposition(x, y_sol)
     turtle.pendown()
     absi = x

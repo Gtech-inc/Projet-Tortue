@@ -13,13 +13,16 @@ def porte2(x, y, couleur):
         La partie rectangulaire a une hauteur de 40 pixels
         La partie semi circulaire a un rayon de 15 pixels
     """
+    x += 15
+    turtle.setx(x)
+    turtle.sety(y)
     turtle.begin_fill()
     turtle.pendown()
     turtle.fillcolor(couleur)
-    x += 15
-    turtle.setx(x)
+
     y += 50
     turtle.sety(y)
+
 
     for i in range(30):
         coef = 0.88 * i
@@ -31,9 +34,9 @@ def porte2(x, y, couleur):
 
     y -= 50
     turtle.sety(y)
-    turtle.setposition(x, y)
     turtle.end_fill()
     turtle.penup()
+    # turtle.setposition(x, y)
     pass
 
 
