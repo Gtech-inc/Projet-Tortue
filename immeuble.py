@@ -16,7 +16,7 @@ def immeuble(x, y_sol):
     La couleur de la façade et la couleur de la porte sont tirées au hasard
     """
     # Nombre d'étage (aléatoire)
-    nbStage = randint(0, 5)
+    nbStage = randint(0, 4)
 
     # Couleurs des éléments (aléatoire)
     

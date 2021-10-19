@@ -16,7 +16,7 @@ def porte2(x, y, couleur):
     turtle.begin_fill()
     turtle.pendown()
     turtle.fillcolor(couleur)
-    x += 25
+    x += 15
     turtle.setx(x)
     y += 50
     turtle.sety(y)
